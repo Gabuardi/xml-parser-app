@@ -1,0 +1,23 @@
+{
+  "name": "xml-parser-app",
+  "version": "1.0.0",
+  "description": "An app that pase an uploaded file and return a text",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Josué Gabuardi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.4",
+    "install": "^0.13.0",
+    "npm": "^6.14.7",
+    "xml-parse-from-string": "^1.0.1",
+    "xml2js": "^0.4.23"
+  },
+  "engines": {
+    "node": ">=14.5.0"
+  },
+  "type": "module"
+}
