@@ -1,6 +1,5 @@
 import express from 'express';
 import fileUpload from 'express-fileupload';
-import xml2js from 'xml2js';
 
 const APP = express();
 const PORT = 3000;
@@ -10,9 +9,9 @@ APP.use(fileUpload());
 
 APP.listen(PORT, () => console.log(`- || APP RUNNING ||--> http://localhost:${PORT}`));
 
-APP.post('/file', (req, res) => {
-  let xmlString = req.files.filetest.data.toString();
-  xmlString = xmlString.replace(/<.[^>]*>/g, '|').trim();
+APP.post('/parse', (req, res) => {
+  let xmlString = req.files.xmlFile.data.toString();
+  xmlString = xmlString.replace(/<.[^>]*>/g, '<span>|</span>').trim();
   res.send(xmlString.replace(/(\r\n|\n|\r|\s)/gm, ''));
 });
 

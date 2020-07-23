@@ -6,8 +6,9 @@
 }
 
 body {
+  margin: 0;
   height: 100vh;
-  background-color: orange;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +16,17 @@ body {
 }
 
 h1 {
+  padding-bottom: 10px;
   font-family: amsterdam, cursive;
+  text-align: center;
+  width: 100%;
+  color: orange;
+  border-bottom: 2px solid orange;
+}
+
+h2 {
+  margin: 1px 0 50px;
+  font-family: 'Roboto Mono', monospace;
 }
 
 button {
@@ -26,8 +37,32 @@ button {
   border: none;
   transition: box-shadow 0.3s;
   cursor: pointer;
+  background-color: orange;
+  outline: none;
 }
 
 button:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+button:active {
+  background-color: #d68e09;
+  border: none;
+}
+
+.xml-area {
+  line-height: 23px;
+  font-family: 'Roboto Mono', monospace;
+  word-break: break-all;
+  padding: 20px;
+  color: whitesmoke;
+  border-radius: 6px;
+  margin-top: 20px;
+  width: 80%;
+  height: 500px;
+  background-color: #474747;
+}
+
+.xml-area > span {
+  color: orange;
 }
